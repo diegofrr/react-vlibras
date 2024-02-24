@@ -1,5 +1,5 @@
 <div align="center">
-<img src="assets/vlibras-banner.png" height="128"/>
+<img src="https://github.com/diegofrr/react-vlibras/blob/main/assets/vlibras-banner.png?raw=true" width="480"/>
 
 # react-vlibras
 
