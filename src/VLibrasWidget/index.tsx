@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 
 import type { VLibrasWidgetParams } from "./types";
-import { SCRIPT_URL } from "./constants";
 import { getAbbrevPosition } from "./utils";
+
+import { SCRIPT_URL } from "./constants";
 
 export default function VLibras(params: VLibrasWidgetParams) {
   useEffect(() => {
@@ -28,7 +29,7 @@ export default function VLibras(params: VLibrasWidgetParams) {
   return (
     <>
       {/* @ts-ignore */}
-      <div vw="" className="enabled z-max">
+      <div vw="" className="enabled">
         <div vw-access-button="" className="active"></div>
         <div vw-plugin-wrapper="">
           <div className="vw-plugin-top-wrapper"></div>
