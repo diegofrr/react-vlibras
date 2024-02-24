@@ -16,11 +16,13 @@ function getAbbrevPosition(position) {
 }
 
 const SCRIPT_URL = "https://www.vlibras.gov.br/app/vlibras-plugin.js";
+const DEV_SCRIPT_URL = "https://www-dth.vlibras.gov.br/app/vlibras-plugin.js";
 
 function VLibras(params) {
+    const isDevelopment = params.isDevelopment !== false;
     useEffect(() => {
         const script = document.createElement("script");
-        script.src = SCRIPT_URL;
+        script.src = isDevelopment ? DEV_SCRIPT_URL : SCRIPT_URL;
         script.async = true;
         script.onload = () => {
             // @ts-ignore

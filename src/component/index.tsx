@@ -3,12 +3,14 @@ import { useEffect } from "react";
 import type { VLibrasWidgetParams } from "./types";
 import { getAbbrevPosition } from "./utils";
 
-import { SCRIPT_URL } from "./constants";
+import { SCRIPT_URL, DEV_SCRIPT_URL } from "./constants";
 
 export default function VLibras(params: VLibrasWidgetParams) {
+  const isDevelopment = params.isDevelopment !== false;
+
   useEffect(() => {
     const script = document.createElement("script");
-    script.src = SCRIPT_URL;
+    script.src = isDevelopment ? DEV_SCRIPT_URL : SCRIPT_URL;
     script.async = true;
     script.onload = () => {
       // @ts-ignore

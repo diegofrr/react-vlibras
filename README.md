@@ -72,7 +72,7 @@ React.js
 
 import VLibras from "react-vlibras";
 
-function MyApp({ Component, pageProps }) {
+export default function App({ Component, pageProps }) {
   return (
     <>
       <VLibras />
@@ -80,21 +80,20 @@ function MyApp({ Component, pageProps }) {
     </>
   );
 }
-
-export default MyApp;
 ```
 
 # Propriedades
 
 Você pode definir configurações padrão da ferramenta, como por exemplo: **posição na tela**, **avatar** e **opacidade de fundo** através das propriedades.
 
-| Atributo        | Tipo                                                                                                   | Descrição                                                                                                                                                                                                               | Padrão                       |
-| --------------- | ------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- |
-| avatar          | `icaro` \| `hosana` \| `guga` \| `random`                                                              | Avatar 3D                                                                                                                                                                                                               | `icaro`                      |
-| position        | `right` \| `left` \| `top` \| `bottom` \| `top-left` \| `top-right` \| `bottom-left` \| `bottom-right` | Posição da ferramenta na tela                                                                                                                                                                                           | `right`                      |
-| opacity         | `number`                                                                                               | Opacidade do background do avatar (0 ~ 1)                                                                                                                                                                               | `1`                          |
-| personalization | `string`                                                                                               | Personalização do avatar (somente parceiros do projeto VLibras).                                                                                                                                                        | `undefined`                  |
-| rootPath        | `string`                                                                                               | Link da pasta root da aplicação (entrar em contato para obter). Para otimizar a inicialização da ferramenta, você pode subi-la junto da sua aplicação e fornecer o _path_ de acesso (isso impede receber atualizações). | `https://vlibras.gov.br/app` |
+| Atributo        | Tipo                                                                                                   | Descrição                                                                                                                                                                                                                                                                                                                                                                                                  | Padrão                       |
+| --------------- | ------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- |
+| avatar          | `icaro` \| `hosana` \| `guga` \| `random`                                                              | Avatar 3D                                                                                                                                                                                                                                                                                                                                                                                                  | `icaro`                      |
+| position        | `right` \| `left` \| `top` \| `bottom` \| `top-left` \| `top-right` \| `bottom-left` \| `bottom-right` | Posição da ferramenta na tela                                                                                                                                                                                                                                                                                                                                                                              | `right`                      |
+| opacity         | `number`                                                                                               | Opacidade do background do avatar (0 ~ 1)                                                                                                                                                                                                                                                                                                                                                                  | `1`                          |
+| personalization | `string`                                                                                               | Personalização do avatar (somente parceiros do projeto VLibras).                                                                                                                                                                                                                                                                                                                                           | `undefined`                  |
+| isDevelopment   | `boolean`                                                                                              | Ao ser implementado em um site, o **VLibras Widget** realiza um "ping" ao servidor a cada atualização de página. Para evitar estas requisições desnecessárias para o servidor do **VLibras**, recomenda-se o uso do ambiente de homologação da ferramenta ou, ainda mais preferível, evitar sua utilização em desenvolvimento (por ex., pode ser feita a renderização condicionada no `process.env.MODE`). | `true`                       |
+| rootPath        | `string`                                                                                               | Link da pasta root da aplicação (entrar em contato para obter). Para otimizar a inicialização da ferramenta, você pode subi-la junto da sua aplicação e fornecer o _path_ de acesso (isso impede receber atualizações).                                                                                                                                                                                    | `https://vlibras.gov.br/app` |
 
 # Saiba mais sobre o projeto VLibras
 
