@@ -1,7 +1,7 @@
 {
   "name": "react-vlibras",
-  "version": "2.1.1",
-  "description": "Library to use VLibras Widget in your React App",
+  "version": "2.1.2",
+  "description": "Torne sua aplicação React acessível com o VLibras Widget",
   "keywords": [
     "vlibras",
     "libras",
