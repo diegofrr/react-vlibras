@@ -20,10 +20,6 @@ export default function VLibras(params: VLibrasWidgetParams) {
       (window as any).onload();
     };
     document.head.appendChild(script);
-
-    return () => {
-      window.onload = null;
-    };
   }, []);
 
   return (

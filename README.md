@@ -24,19 +24,18 @@ npm i react-vlibras
 # Como utilizar
 
 > [!CAUTION]
-> Para evitar re-renderizações da ferramenta ao alterar a rota, é <u>extremamente importante</u> implementar o componente da ferramenta no arquivo root acima do container da sua aplicação.
+> Para evitar re-renderizações da ferramenta ao alterar a rota, é <u>extremamente importante</u> implementar o componente no arquivo root fora do container da aplicação.
 
 Next.js
 
 ```typescript
 // providers.tsx || providers.jsx
+
 "use client";
 
 import VLibras from "react-vlibras";
 
 export default function Providers({ children }: { children: React.ReactNode }) {
-  const router = useRouter();
-
   return (
     <>
       <VLibras />
@@ -49,7 +48,6 @@ export default function Providers({ children }: { children: React.ReactNode }) {
 ```typescript
 // layout.tsx || layout.jsx
 
-// ... outros imports
 import Providers from "./providers";
 
 export default function RootLayout({
@@ -71,7 +69,7 @@ React.js
 
 ```typescript
 // _app.tsx | _app.jsx
-import React from "react";
+
 import VLibras from "react-vlibras";
 
 function MyApp({ Component, pageProps }) {
