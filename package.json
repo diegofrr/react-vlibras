@@ -1,11 +1,11 @@
 {
-  "name": "vlibrasjs",
+  "name": "react-vlibras",
   "version": "1.0.0",
   "description": "Library to use VLibras Widget in your React App",
   "keywords": [
     "vlibras",
     "libras",
-    "vlibrasjs",
+    "react-vlibras",
     "accessibility"
   ],
   "main": "dist/index.js",
