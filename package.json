@@ -11,7 +11,7 @@
   "author": "Diêgo Ferreira",
   "repository": {
     "type": "git",
-    "url": "https://github.com/diegoferr/react-vlibras.git"
+    "url": "https://github.com/diegofrr/react-vlibras.git"
   },
   "homepage": "https://vlibras.gov.br",
   "main": "dist/index.js",
