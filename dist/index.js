@@ -1,8 +1,6 @@
 import { jsx, Fragment, jsxs } from 'react/jsx-runtime';
 import { useEffect } from 'react';
 
-const SCRIPT_URL = "https://www.vlibras.gov.br/app/vlibras-plugin.js";
-
 function getAbbrevPosition(position) {
     const map = {
         left: "L",
@@ -16,6 +14,8 @@ function getAbbrevPosition(position) {
     };
     return map[position] || position;
 }
+
+const SCRIPT_URL = "https://www.vlibras.gov.br/app/vlibras-plugin.js";
 
 function VLibras(params) {
     useEffect(() => {
@@ -35,7 +35,7 @@ function VLibras(params) {
             window.onload = null;
         };
     }, []);
-    return (jsx(Fragment, { children: jsxs("div", { vw: "", className: "enabled z-max", children: [jsx("div", { "vw-access-button": "", className: "active" }), jsx("div", { "vw-plugin-wrapper": "", children: jsx("div", { className: "vw-plugin-top-wrapper" }) })] }) }));
+    return (jsx(Fragment, { children: jsxs("div", { vw: "", className: "enabled", children: [jsx("div", { "vw-access-button": "", className: "active" }), jsx("div", { "vw-plugin-wrapper": "", children: jsx("div", { className: "vw-plugin-top-wrapper" }) })] }) }));
 }
 
 export { VLibras as default };
