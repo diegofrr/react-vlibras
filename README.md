@@ -38,7 +38,7 @@ import VLibras from "react-vlibras";
 export default function Providers({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <VLibras />
+      <VLibras isNextjs />
       {children}
     </>
   );
@@ -68,20 +68,21 @@ export default function RootLayout({
 React.js
 
 ```typescript
-// _app.tsx | _app.jsx
+// index.tsx | index.jsx
+// É necessário remover React.StrictMode
 
 import VLibras from "react-vlibras";
 
-function MyApp({ Component, pageProps }) {
-  return (
-    <>
-      <VLibras />
-      <Component {...pageProps} />
-    </>
-  );
-}
+const root = ReactDOM.createRoot(
+  document.getElementById("root") as HTMLElement
+);
 
-export default MyApp;
+root.render(
+  <>
+    <VLibras />
+    <App />
+  </>
+);
 ```
 
 # Propriedades
@@ -95,6 +96,7 @@ Você pode definir configurações padrão da ferramenta, como por exemplo: **po
 | opacity         | `number`                                                                                               | Opacidade do background do avatar (0 ~ 1)                                                                                                                                                                               | `1`                          |
 | personalization | `string`                                                                                               | Personalização do avatar (somente parceiros do projeto VLibras).                                                                                                                                                        | `undefined`                  |
 | rootPath        | `string`                                                                                               | Link da pasta root da aplicação (entrar em contato para obter). Para otimizar a inicialização da ferramenta, você pode subi-la junto da sua aplicação e fornecer o _path_ de acesso (isso impede receber atualizações). | `https://vlibras.gov.br/app` |
+| isNextjs        | `boolean`                                                                                              | Define se é uma aplicação **Next.js**. É útil para a ferramenta rodar corretamente.                                                                                                                                     | `false`                      |
 
 # Saiba mais sobre o projeto VLibras
 

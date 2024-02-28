@@ -28,9 +28,13 @@ function VLibras(params) {
                 ...params,
                 position: getAbbrevPosition(params.position || "right"),
             });
-            window.onload();
+            if (params.isNextjs)
+                window.onload();
         };
-        document.head.appendChild(script);
+        document.body.appendChild(script);
+        return () => {
+            document.body.removeChild(script);
+        };
     }, []);
     return (jsx(Fragment, { children: jsxs("div", { vw: "", className: "enabled", children: [jsx("div", { "vw-access-button": "", className: "active" }), jsx("div", { "vw-plugin-wrapper": "", children: jsx("div", { className: "vw-plugin-top-wrapper" }) })] }) }));
 }
