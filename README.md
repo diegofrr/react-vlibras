@@ -29,7 +29,7 @@ npm i react-vlibras
 Next.js
 
 ```typescript
-// providers.tsx || providers.jsx
+// providers.tsx | providers.jsx
 
 "use client";
 
@@ -46,7 +46,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
 ```
 
 ```typescript
-// layout.tsx || layout.jsx
+// layout.tsx | layout.jsx
 
 import Providers from "./providers";
 
