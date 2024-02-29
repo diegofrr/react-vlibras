@@ -87,7 +87,7 @@ root.render(
 
 # Propriedades
 
-Você pode definir configurações padrão da ferramenta, como por exemplo: **posição na tela**, **avatar** e **opacidade de fundo** através das propriedades.
+Você pode definir configurações padrão da ferramenta, como **posição na tela**, **avatar** e **opacidade de fundo** através das propriedades.
 
 | Atributo        | Tipo                                                                                                   | Descrição                                                                                                                                                                                                               | Padrão                       |
 | --------------- | ------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- |
