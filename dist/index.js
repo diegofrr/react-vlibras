@@ -28,7 +28,7 @@ function VLibras(params) {
                 ...params,
                 position: getAbbrevPosition(params.position || "right"),
             });
-            if (params.isNextjs)
+            if (params.safeInit)
                 window.onload();
         };
         document.body.appendChild(script);

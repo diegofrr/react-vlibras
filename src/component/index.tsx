@@ -17,7 +17,7 @@ export default function VLibras(params: VLibrasWidgetParams) {
         position: getAbbrevPosition(params.position || "right"),
       });
 
-      if (params.isNextjs) (window as any).onload();
+      if (params.safeInit) (window as any).onload();
     };
     document.body.appendChild(script);
 
