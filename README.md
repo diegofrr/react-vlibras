@@ -66,7 +66,7 @@ export default function RootLayout({
 ```
 
 > [!IMPORTANT]
-> Caso queria testar a ferramenta no ambiente de desenvolvimento, é necessário desativar o modo estrito do React.
+> Caso queira testar a ferramenta no ambiente de desenvolvimento, é necessário desativar o modo estrito do React.
 
 ```javascript
 // next.config.js
